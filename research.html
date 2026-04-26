@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Francesco Casalena</title>
+  <title>Research — Francesco Casalena</title>
 
-<!-- Privacy-friendly analytics by Plausible -->
-<script async src="https://plausible.io/js/pa-Vin8GMlXeI5Ly4kozP682.js"></script>
-<script>
-  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-  plausible.init()
-</script>
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-Vin8GMlXeI5Ly4kozP682.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
 
-  <!-- Google Analytics — replace G-XXXXXXXXXX with your actual GA4 Measurement ID, then uncomment -->
-
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-N25XM95RYB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -21,7 +20,6 @@
     gtag('js', new Date());
     gtag('config', 'G-N25XM95RYB');
   </script>
-
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -39,7 +37,6 @@
     a { text-decoration: underline; text-underline-offset: 3px; }
     a:hover { opacity: 0.75; }
 
-    /* ── NAV ── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -76,9 +73,9 @@
     .nav-links a:hover,
     .nav-links a.active { color: #073763; }
 
-    /* ── PAGES ── */
-    .page { display: none; padding-top: 56px; }
-    .page.active { display: block; }
+    .hamburger { display: none; }
+
+    .page { padding-top: 56px; }
 
     .inner {
       width: 90%;
@@ -87,85 +84,6 @@
       padding: 40px 0 72px;
     }
 
-    /* ── HOME ── */
-    .home-heading {
-      font-size: 32pt;
-      font-weight: 400;
-      line-height: 1.2;
-      margin-bottom: 32px;
-      color: #081a89;
-      text-align: center;
-    }
-
-    .home-grid {
-      display: flex;
-      flex-direction: row;
-      gap: 48px;
-      align-items: flex-start;
-    }
-
-    .home-photo {
-      flex-shrink: 0;
-    }
-
-    .home-photo img {
-      width: 420px;
-      height: 560px;
-      object-fit: cover;
-      object-position: top center;
-      display: block;
-      background: #e8e8e8;
-    }
-
-    .home-right {
-      flex: 1;
-      min-width: 0;
-      padding-top: 60px;
-    }
-
-    .home-right p {
-      font-size: 14pt;
-      margin-bottom: 12px;
-      color: #073763;
-      line-height: 1.6667;
-    }
-
-    .home-right .cv-line {
-      margin-top: 16px;
-      font-size: 14pt;
-      color: #073763;
-    }
-
-    .home-right .cv-line a { color: #081a89; }
-
-    /* ── DIVIDER ── */
-    hr {
-      border: none;
-      border-top: 1px solid #ddd;
-      margin: 32px 0;
-    }
-
-    /* ── CONTACT ── */
-    .contact-section h2 {
-      font-size: 14pt;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: #111;
-    }
-
-    .contact-section p {
-      font-size: 12pt;
-      color: #111;
-      line-height: 1.4;
-    }
-
-    .contact-section a { color: #081a89; }
-
-    .hamburger {
-      display: none;
-    }
-
-    /* ── PAGE HEADING ── */
     .page-heading {
       font-size: 32pt;
       font-weight: 400;
@@ -175,7 +93,6 @@
       text-align: center;
     }
 
-    /* ── PAPERS ── */
     .paper {
       padding: 24px 0;
       border-bottom: 1px solid #e8e8e8;
@@ -255,44 +172,6 @@
       margin-top: 14px;
     }
 
-    /* ── TEACHING ── */
-    .institution { margin-bottom: 32px; }
-
-    .institution h2 {
-      font-size: 12pt;
-      font-weight: 700;
-      margin-bottom: 2px;
-      color: #073763;
-    }
-
-    .institution .role {
-      font-size: 0.85rem;
-      color: #111;
-      margin-bottom: 12px;
-    }
-
-    .course-list { list-style: none; padding: 0; }
-
-    .course-list li {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      font-size: 0.92rem;
-      color: #111;
-      padding: 4px 0;
-      border-bottom: 1px solid #f0f0f0;
-      gap: 16px;
-    }
-
-    .course-list li:last-child { border-bottom: none; }
-
-    .course-list .years {
-      font-size: 0.82rem;
-      color: #999;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-
     @media (max-width: 600px) {
       .nav-links {
         display: none;
@@ -309,13 +188,8 @@
         z-index: 200;
       }
 
-      .nav-links.open {
-        display: flex;
-      }
-
-      .nav-links li {
-        width: 100%;
-      }
+      .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; }
 
       .nav-links a {
         display: block;
@@ -324,9 +198,7 @@
         border-bottom: 1px solid #f0f0f0;
       }
 
-      .nav-links li:last-child a {
-        border-bottom: none;
-      }
+      .nav-links li:last-child a { border-bottom: none; }
 
       .hamburger {
         display: flex;
@@ -351,51 +223,10 @@
         flex-wrap: nowrap;
       }
 
-      .nav-name {
-        font-size: 13pt;
-      }
-
-      .page {
-        padding-top: 56px;
-      }
-
-      .inner {
-        width: 95%;
-        padding: 24px 0 48px;
-      }
-
-      .home-grid {
-        flex-direction: column;
-        gap: 24px;
-        align-items: center;
-      }
-
-      .home-photo {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-      }
-
-      .home-photo img {
-        width: 80%;
-        height: auto;
-        max-height: 420px;
-        object-fit: cover;
-        object-position: top center;
-      }
-
-      .home-right {
-        padding-top: 0;
-        width: 100%;
-      }
-
-      .home-heading {
-        font-size: 24pt;
-      }
-
-      .page-heading {
-        font-size: 24pt;
-      }
+      .nav-name { font-size: 13pt; }
+      .page { padding-top: 56px; }
+      .inner { width: 95%; padding: 24px 0 48px; }
+      .page-heading { font-size: 24pt; }
     }
   </style>
 </head>
@@ -407,45 +238,13 @@
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links" id="nav-menu">
-    <li><a href="/" id="nav-home" class="active">Home</a></li>
-    <li><a href="/research" id="nav-research">Research</a></li>
-    <li><a href="/teaching" id="nav-teaching">Teaching</a></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/research" class="active">Research</a></li>
+    <li><a href="/teaching">Teaching</a></li>
   </ul>
 </nav>
 
-<!-- ── HOME ── -->
-<div class="page active" id="page-home">
-  <div class="inner">
-    <h1 class="home-heading">About</h1>
-    <div class="home-grid">
-      <div class="home-photo">
-        <img src="photo.jpg" alt="Francesco Casalena" onerror="this.style.display='none'" />
-      </div>
-      <div class="home-right">
-        <p>I am a fifth-year PhD student in International Economics at the Geneva Graduate Institute (IHEID).</p>
-        <p>My research interests lie at the intersection of international macro and monetary economics, forecasting and macroeconometric modelling.</p>
-        <p class="cv-line"><em>You can download my CV <a href="https://francescocasalena.github.io/cv_casalena/cv_casalena.pdf" target="_blank">here</a>.</em></p>
-
-        <hr>
-
-        <div class="contact-section">
-          <h2>Contact</h2>
-          <p>
-            Geneva Graduate Institute<br>
-            Chemin Eugène-Rigot 2<br>
-            1202 Geneva, Switzerland<br>
-            <span style="display:block; margin-top: 0.25em;"></span>
-            <a href="mailto:francesco.casalena@graduateinstitute.ch">francesco.casalena@graduateinstitute.ch</a><br>
-            <a href="https://ch.linkedin.com/in/francesco-casalena" target="_blank">LinkedIn</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ── RESEARCH ── -->
-<div class="page" id="page-research">
+<div class="page">
   <div class="inner">
     <div class="page-heading">Research</div>
 
@@ -490,57 +289,9 @@
   </div>
 </div>
 
-<!-- ── TEACHING ── -->
-<div class="page" id="page-teaching">
-  <div class="inner">
-    <div class="page-heading">Teaching</div>
-
-    <div class="institution">
-      <h2>Geneva Graduate Institute (IHEID)</h2>
-      <div class="role">Graduate Teaching Assistant · 2023–2026</div>
-      <ul class="course-list">
-        <li><span>Macroeconomics B</span><span class="years">Spring 2023</span></li>
-        <li><span>Econometrics I</span><span class="years">Fall 2023, 2024, 2025</span></li>
-        <li><span>Econometrics II</span><span class="years">Spring 2024, 2025</span></li>
-      </ul>
-    </div>
-
-    <div class="institution">
-      <h2>École Polytechnique Fédérale de Lausanne (EPFL)</h2>
-      <div class="role">Graduate Teaching Assistant · 2022–2026</div>
-      <ul class="course-list">
-        <li><span>Globalization, Robotics and the Future of Work</span><span class="years">Fall 2022, 2023</span></li>
-        <li><span>Sustainability in the Global Context</span><span class="years">Fall 2024, 2025</span></li>
-      </ul>
-    </div>
-
-    <div class="institution">
-      <h2>Université de Genève (UNIGE)</h2>
-      <div class="role">Teaching Assistant · 2025–2026</div>
-      <ul class="course-list">
-        <li><span>Introduction à la Macroéconomie</span><span class="years">Fall 2025</span></li>
-        <li><span>Introduction to Microeconomics</span><span class="years">Fall 2025</span></li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-
 <script>
   function toggleMenu() {
     document.getElementById('nav-menu').classList.toggle('open');
-  }
-
-  function closeMobileMenu() {
-    document.getElementById('nav-menu').classList.remove('open');
-  }
-
-  function showPage(name) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-    document.getElementById('page-' + name).classList.add('active');
-    document.getElementById('nav-' + name).classList.add('active');
-    window.scrollTo(0, 0);
   }
 
   function toggleAbstract(btn) {
